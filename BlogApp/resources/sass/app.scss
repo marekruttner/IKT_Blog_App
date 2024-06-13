@@ -7,6 +7,48 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+.col-lg-2_4 {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.col-lg-2_4 {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+.page-item.active .page-link {
+    background-color: #ff66ff;
+    border-color: #ff66ff;
+}
+
+.page-link {
+    color: #ff66ff;
+    font-size: 0.875rem; /* Adjust the font size */
+    padding: 0.5rem 0.75rem; /* Adjust the padding */
+}
+
+.page-link:hover {
+    color: #fc82fc;
+}
+
+.page-link:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.page-item .page-link svg {
+    width: 1em; /* Adjust the width of the SVG arrow */
+    height: 1em; /* Adjust the height of the SVG arrow */
+}
+svg {
+    width: 1em; /* Adjust the width of the SVG arrow */
+    height: 1em;
+}
+
 body {
     background-color: #f8f9fa;
 }

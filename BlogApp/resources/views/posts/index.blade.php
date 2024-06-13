@@ -5,7 +5,7 @@
         <h1 class="mb-4">Blog App</h1>
         <div class="row">
             @foreach($posts as $post)
-                <div class="col-md-3 mb-4">
+                <div class="col-6 col-md-4 col-lg-2_4 mb-4">
                     <div class="card h-100">
                         @if($post->image_url)
                             <img src="{{ asset('storage/' . $post->image_url) }}" class="card-img-top" alt="{{ $post->title }}">
@@ -20,7 +20,7 @@
             @endforeach
         </div>
         <div class="mt-4">
-            {{ $posts->links() }}
+            {{ $posts->links('vendor.pagination.bootstrap-5') }}
         </div>
     </div>
 @endsection

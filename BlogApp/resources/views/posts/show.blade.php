@@ -5,7 +5,15 @@
         <div class="card">
             <div class="card-body">
                 <h1>{{ $post->title }}</h1>
+                @if($post->image_url)
+                    <img src="{{ asset('storage/' . $post->image_url) }}" class="img-fluid mb-3" alt="{{ $post->title }}">
+                @endif
                 <p>{{ $post->body }}</p>
+                @auth
+                    @if(Auth::id() === $post->user_id)
+                        <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-warning">Edit Post</a>
+                    @endif
+                @endauth
                 <hr>
                 <h4>Comments</h4>
                 @foreach($post->comments as $comment)

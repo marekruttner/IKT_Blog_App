@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ config('app.name', 'BlogApp') }}</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .card-title {
+            margin-bottom: 1rem;
+        }
+        .btn-primary {
+            background-color: #ff00ff;
+            border-color: #ff00ff;
+        }
+        .navbar .nav-link {
+            color: #ff00ff;
+        }
+        .navbar .nav-link:hover {
+            color: #ff00ff;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 <div id="app">
@@ -12,6 +40,7 @@
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
                 {{ config('app.name', 'BlogApp') }}
+                Blog App
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
